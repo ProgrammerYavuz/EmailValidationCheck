@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #435ca6, #4d87c4, #58b2df);
+}
+
+.box{
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px 40px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box h3{
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #ccc;
+    letter-spacing: 0.1em;
+}
+
+.box #form{
+    position: relative;
+}
+
+.box #form #email{
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border: none;
+    outline: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box #text{
+    display: block;
+    color: #999;
+    font-weight: 500;
+    padding: 5px 0;
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.box #form.invalid .inputBox::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(./image/cross.png);
+    background-size: cover;
+}
+
+.box #form.valid .inputBox::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(./image/check.png);
+    background-size: cover;
+}
+
+@media only screen and (max-width:575px){
+    .box #form #email{
+        width: 100%;
+    }
+}
